@@ -71,7 +71,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                 if (incomingMessageContent.toLowerCase().includes(word0.toLowerCase())) {
                     console.log(`The word "${word0}" is included in the string.`);
                     await Whatsapp.sendText({
-                        message: `Hey ${recipientName}, \nYou are chatting with *MadaHill* chatbot.\nI can provide information on:*\n⌚Operating hours \n🛒List of stores, \n🤩Special offers \n🌟Upcoming events.\nI can also send you regular updates about:\n📍New store openings, \n🏷️Discounts, \n🤩Promotions \n✅And any changes in the mall's services*`,
+                        message: `Hey ${recipientName}, \nYou are chatting with *MadaHill* chatbot.\nI can provide information on:\n*⌚Operating hours* \n*🛒List of stores* \n*🤩Special offers* \n*🌟Upcoming events*\nI can also send you regular updates about:\n*📍New store openings* \n*🏷️Discounts* \n*🤩Promotions* \n*✅And any changes in the mall's services*`,
                         recipientPhone: recipientPhone
                     });
                 }else if (incomingMessageContent.toLowerCase().includes(word1.toLowerCase())) {
