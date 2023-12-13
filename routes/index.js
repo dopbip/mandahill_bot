@@ -65,7 +65,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                 const word1 = 'operating'
                 const word2 = 'electronics'
                 const word3 = 'lost'
-                const word4 = 'promotions'
+                const word4 = 'promotion'
                 const word5 = 'promotions'
                 console.log(incomingMessageContent.toLowerCase().includes(word0.toLowerCase()))
                 if (incomingMessageContent.toLowerCase().includes(word0.toLowerCase())) {
@@ -77,7 +77,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                 }else if (incomingMessageContent.toLowerCase().includes(word1.toLowerCase())) {
                     console.log(`The word "${word1}" is included in the string.`);
                     await Whatsapp.sendText({
-                        message: `Hello! The mall is open from 10 AM to 9 PM from Monday to Sunday. However, please note that some stores may have slightly different operating hours. Let me know if you need more information about any specific store or event.
+                        message: `Hello! The mall is open from *08AM to 9PM* from *Monday to Sunday*. However, please note that some stores may have slightly different operating hours. Let me know if you need more information about any specific store or event.
                         `,
                         recipientPhone: recipientPhone
                     });
@@ -95,7 +95,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                         });
                   }else if(incomingMessageContent.toLowerCase().includes(word4.toLowerCase())){
                     console.log(`The word "${word4}" is not included in the string.`)
-                    await Whatsapp.sendImage({recipientPhone: recipientPhone, caption: 'Up Comming events🌟🌟🤩',url: 'https://guzzle.akamaized.net/media/thumbnails/catalogues/14846_Zambia_P1_6013470001.jpg.900x10000_q75.jpg'}) 
+                    await Whatsapp.sendImage({recipientPhone: recipientPhone, caption: '*Game Store* is having a promotion🌟🌟🤩',url: 'https://guzzle.akamaized.net/media/thumbnails/catalogues/14846_Zambia_P1_6013470001.jpg.900x10000_q75.jpg'}) 
                   }
                 
             }
